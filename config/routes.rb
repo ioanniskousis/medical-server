@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/sessions/:id" => "sessions#destroy", defaults: { format: 'json' }
+  get "/sessions" => "sessions#create", defaults: { format: 'json' }
+
 end
